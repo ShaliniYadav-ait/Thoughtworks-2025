@@ -5,7 +5,7 @@ public class ShapeCalculator {
         System.out.println("Hello and welcome!");
         Circle c = new Circle(3);
         Triangle t = new Triangle();
-        Rectangle r = new Rectangle();:wq
+        Rectangle r = new Rectangle();
 
 
     };
