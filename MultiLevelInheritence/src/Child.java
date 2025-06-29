@@ -1,7 +1,7 @@
 public class Child extends Parent{
     Child(){
         super(" Shalini");
-        System.out.println("Child Default Constructor");
+        System.out.println("******** Child Default Constructor ********");
     }
 
     Child(String name){
@@ -14,22 +14,20 @@ public class Child extends Parent{
     String lastNameChild = "Vats";
 
     String lastNameChild(){
-        System.out.println("Child's default method");
+        System.out.println("1. Child's default method");
         return lastNameChild;
     }
 
     String fullName(String lastNameChild){
-        System.out.println("Child's parameterized method");
+        System.out.println("2. Child's parameterized method");
         return firstNameChild + lastNameChild;
     }
 
     void allNames(){
         String childLastName = lastNameChild();
         String childFullName = fullName(childLastName);
-        String parentLastName = lastNameParent();
-        String parentFullName = fullNameParent(parentLastName);
-        String gpLastName = lastNameGP();
-        String gpFullName = fullNameGP(gpLastName);
-        System.out.println("Child is "+ childFullName + ", Parent is " + parentFullName + ", Grandparent is " + gpFullName );
+        String parentFullName = fullNameParent();
+        String gpFullName = fullNameGP();
+        System.out.println("Child is "+ childFullName + ",\nParent is " + parentFullName + ",\nGrandparent is " + gpFullName );
     }
 }
