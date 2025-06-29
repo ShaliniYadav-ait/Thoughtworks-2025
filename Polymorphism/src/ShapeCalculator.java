@@ -18,6 +18,6 @@ public class ShapeCalculator {
             System.out.println("Perimeter is : " + type.calculatePerimeter());
             System.out.println(" **************************");
         }
-
+        System.out.println(" **************************");
     }
 }
