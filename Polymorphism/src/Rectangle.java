@@ -1,25 +1,34 @@
-public class Rectangle {
+ class Rectangle extends Shape {
 
-    Rectangle(){
-        calculateArea(2,2);
-        calculatePerimeter(2,2);
+    double length, width;
+    Rectangle(double len, double wid){
+       this.length = len;
+       this.width = wid;
     }
 
-    double calculateArea(double l, double w){
-        return l*w;
+    double calculateArea(){
+        return length*width;
     }
 
-    double calculatePerimeter(double l , double w){
-        return 2*(l+w);
+    double calculatePerimeter(){
+        return 2*(length+width);
     }
 
-    void setDimensions(double length, double width){
-        double area = calculateArea(length, width);
-        double perimeter = calculatePerimeter(length,width);
+    String shape(){
+            return "Rectangle";
     }
 
-    void setDimensions(double side){
-        double area = calculateArea(side, side);
-        double perimeter = calculatePerimeter(side,side);
-    }
+     @Override
+     public String toString() {
+         return "Rectangle";
+     }
+//    void setDimensions(double length, double width){
+//        double area = calculateArea(length, width);
+//        double perimeter = calculatePerimeter(length,width);
+//    }
+//
+//    void setDimensions(double side){
+//        double area = calculateArea(side, side);
+//        double perimeter = calculatePerimeter(side,side);
+//    }
 }

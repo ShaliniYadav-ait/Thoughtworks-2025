@@ -1,17 +1,20 @@
-import java.io.CharArrayReader;
+class Circle extends Shape{
 
-public class Circle {
-
-    Circle(){
-        calculateArea(2);
-        calculatePerimeter(2);
+    double radius;
+    Circle(double r){
+       this.radius = r;
     }
 
-    double calculateArea(double r){
-        return  Math.PI * r * r;
+    double calculateArea(){
+        return  Math.PI * radius * radius;
     }
 
-    double calculatePerimeter(double r){
-        return  2 * Math.PI * r;
+    double calculatePerimeter(){
+        return  2 * Math.PI * radius;
     }
-}
+
+  public String shape() {
+        return "Circle";
+    }
+
+ }

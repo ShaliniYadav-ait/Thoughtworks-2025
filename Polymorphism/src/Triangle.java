@@ -1,15 +1,23 @@
-public class Triangle {
+ class Triangle extends Shape{
 
-    Triangle(){
-    calculateArea(2,2);
-    calculatePerimeter(2,2,2);
+    double s1,s2,s3;
+    Triangle(double s1,double s2,double s3){
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
     }
 
-    int calculateArea(int h, int b){
-        return (h*b)/2;
+    double calculateArea(){
+        double s = (s1+s2+s3)/2;
+        return  Math.sqrt(s*(s-s1)*(s-s2)*(s-s2));
     }
 
-    int calculatePerimeter(int a, int b, int c){
-        return (a+b+c);
+    double calculatePerimeter(){
+        return s1+s2+s3 ;
     }
+
+     @Override
+     public String shape() {
+         return "Triangle";
+     }
 }
