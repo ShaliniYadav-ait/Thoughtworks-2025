@@ -1,4 +1,4 @@
-class IllegalAge extends Exception{
+class IllegalAge extends RuntimeException{
         public  IllegalAge(String message){
             super(message);
         }
