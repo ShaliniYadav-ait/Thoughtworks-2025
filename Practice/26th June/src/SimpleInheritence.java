@@ -1,15 +1,15 @@
 public class SimpleInheritence {
     public static void main(String[] args){
-        Child child = new Child();
-        System.out.println("Child name is " + child.firstName + " " + child.lastName);
-        System.out.println("Parent name is " + child.pFirstName + " " + child.pLastName);
+        ChildClass childClass = new ChildClass();
+        System.out.println("Child name is " + childClass.firstName + " " + childClass.lastName);
+        System.out.println("Parent name is " + childClass.pFirstName + " " + childClass.pLastName);
     }
 
 }
 
-class Parent {
+class ParentClass {
     String pFirstName, pLastName;
-    Parent(){
+    ParentClass(){
         this.pFirstName = "Shalini";
         this.pLastName = ParentLastName();
     }
@@ -20,9 +20,9 @@ class Parent {
 }
 
 
-class Child extends Parent{
+class ChildClass extends ParentClass {
     String firstName, lastName;
-    Child(){
+    ChildClass(){
         this.firstName = "Avyukt";
         this.lastName = LastName();
     }
