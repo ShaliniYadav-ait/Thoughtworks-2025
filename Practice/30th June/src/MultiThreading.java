@@ -6,6 +6,8 @@ public class MultiThreading {
       firstThread.setName("First");
       secondThread.start();
       secondThread.setName("Second");
+      MyThread thirdThread = new MyThread("Shalini");
+      thirdThread.start();
       for (int dis = 0; dis < 50; dis++) {
           System.out.println("In Main. " + dis);
       }
@@ -13,9 +15,17 @@ public class MultiThreading {
 }
 
 class MyThread extends Thread{
+    MyThread(){
+
+    }
+    String threadName;
+    MyThread(String name){
+        this.threadName = name;
+    }
+
     public void run(){
         for (int distance = 0; distance < 50; distance++) {
-            System.out.println("Here! " + distance + " " +Thread.currentThread().getName());
+            System.out.println("Here! " + distance + " " + this.threadName + " ** " + Thread.currentThread().getName());
         }
     }
 }
