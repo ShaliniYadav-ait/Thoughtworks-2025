@@ -40,8 +40,8 @@ class syncThreading {
         Bachu b = new Bachu(c);
         Nirwani n = new Nirwani(c);
         b.setName("Rashmi");
-        b.start();
         n.setName("Swati");
+        b.start();
         n.start();
     }
 }
