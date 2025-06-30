@@ -34,7 +34,7 @@ class Nirwani extends Thread{
     }
 }
 
-class syncThreading {
+class SyncThreading {
     public static void main(String[] args){
         Camera c = new Camera();
         Bachu b = new Bachu(c);
