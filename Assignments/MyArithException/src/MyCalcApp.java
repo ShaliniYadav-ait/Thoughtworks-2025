@@ -10,7 +10,7 @@ public class MyCalcApp {
         try {
             c.caldouble(n);
         }catch (MyArithException e){
-            System.out.println("Invalid age " + e.getMessage() );
+            System.out.println("Caught invalid age exception with message - " + e.getMessage() );
         }
     }
 }
