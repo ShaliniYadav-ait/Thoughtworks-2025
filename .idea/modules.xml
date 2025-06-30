@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Laptop/Laptop.iml" filepath="$PROJECT_DIR$/Laptop/Laptop.iml" />
       <module fileurl="file://$PROJECT_DIR$/MultiLevelInheritence/MultiLevelInheritence.iml" filepath="$PROJECT_DIR$/MultiLevelInheritence/MultiLevelInheritence.iml" />
       <module fileurl="file://$PROJECT_DIR$/Polymorphism/Polymorphism.iml" filepath="$PROJECT_DIR$/Polymorphism/Polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/Vaapasi 2025.iml" filepath="$PROJECT_DIR$/Vaapasi 2025.iml" />
     </modules>
   </component>
