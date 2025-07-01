@@ -1,20 +1,3 @@
-class Signal{
-
-    synchronized void waitForVishal(){
-        System.out.println("Manav : Waiting for Vishal's message....");
-        try{
-            wait();
-         }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-        System.out.println("Manav : Got the message! Lets start work.");
-    }
-
-    synchronized void notifyManav(){
-        System.out.println("Vishal sending signal to Manav...");
-        notify();
-    }
-}
 public class WaitNotify {
     public static void main(String[] args){
         Signal signal = new Signal();
@@ -27,5 +10,21 @@ public class WaitNotify {
         manavThread.start();
         vishalThread.start();
     }
+}
 
+class Signal{
+    synchronized void waitForVishal(){
+        System.out.println("Manav : Waiting for Vishal's message....");
+        try{
+            wait();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        System.out.println("Manav : Got the message! Lets start work.");
+    }
+
+    synchronized void notifyManav(){
+        System.out.println("Vishal sending signal to Manav...");
+        notify();
+    }
 }
