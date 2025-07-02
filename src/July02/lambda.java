@@ -14,8 +14,6 @@ public class lambda {
         Greeting g = ()->"Happy Holidays";
         System.out.println(g.sayHello());
 
-        Greeting g2 = () -> "Welcome back!";
-        s
         Maths m = (Integer::sum);
         System.out.println(m.add(2,3));
     }
