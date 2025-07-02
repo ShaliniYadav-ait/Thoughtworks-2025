@@ -2,7 +2,7 @@ package July02;
 
 import java.sql.*;
 
-public class jdbcExample {
+public class StatementExample {
     public static void main(String[] args){
     String url = "jdbc:mysql://localhost:3306/";
     String username = "root";

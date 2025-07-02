@@ -3,8 +3,7 @@ package July02;
 import java.sql.*;
 import java.util.Scanner;
 
-public class ScannerExample {
-
+public class PreparedStatement {
         public static void main(String[] args){
             login userDetails = getLogin();
             Result result = getResult();
@@ -21,7 +20,7 @@ public class ScannerExample {
         Connection con = DriverManager.getConnection(userDetails.url(), userDetails.username(), userDetails.password());
 
         String sql = "INSERT INTO testdb.Persons (PersonID,LastName, FirstName,Address,City) VALUES (?,?,?,?,?)";
-        PreparedStatement ps = con.prepareStatement(sql);
+        java.sql.PreparedStatement ps = con.prepareStatement(sql);
 
         setData(ps, result);
         int rows = ps.executeUpdate();
@@ -42,7 +41,7 @@ public class ScannerExample {
     private record login(String url, String username, String password) {
     }
 
-    private static void setData(PreparedStatement ps, Result result) throws SQLException {
+    private static void setData(java.sql.PreparedStatement ps, Result result) throws SQLException {
         ps.setInt(1, result.id());
         ps.setString(2, result.lastName());
         ps.setString(3, result.firstName());
